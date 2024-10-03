@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #4CAF50;
+    --light-green: #8BC34A;
+    --dark-green: #2E7D32;
+    --text-color: #333333;
+    --bg-color: #E8F5E9;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.bg-image {
+    background-image: url('images/微信图片_20231009043831.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.hero {
+    padding: 100px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background-color: rgba(76, 175, 80, 0.7);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+section {
+    padding: 80px 0;
+    background-color: rgba(232, 245, 233, 0.9);
+}
+
+.achievement-card, .portfolio-item {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 1px solid var(--light-green);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover, .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--light-green);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -16px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+        left: 15px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+}
+
+#quick-info i {
+    color: var(--primary-color);
+}
+
+.fas, .far, .fab {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+h2 .fas, h2 .far, h2 .fab {
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: var(--dark-green) !important;
+    color: #ffffff;
+}
+
+/* 添加其他需要的样式 */
